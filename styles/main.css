@@ -73,5 +73,65 @@ header img {
 }
 
 main {
-  dis
+  display: flex;
+  gap: 1.25rem;
+  padding: 0 1em 1em;
+}
+
+main > aside { flex: 0 0 25%; }
+main > section { flex: 1 0 75%; }
+
+.featured {
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding: 1rem 0;
+}
+
+/* Featured image: float right, no border or rounding */
+.featured img {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  width: 100%;
+  min-width: 100px;
+  max-width: 250px;
+  height: auto;
+}
+
+/* Sidebar speaker images */
+aside img {
+  width: 100%;
+  min-width: 40px;
+  max-width: 75px;
+  height: auto;
+  border: 4px double var(--accent-color);
+  border-radius: 10px;
+}
+
+footer {
+  background-color: var(--accent-color);
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  padding: 1em 0;
+}
+
+.large { font-size: 125%; }
+
+.speaker h1 { color: var(--accent-color); }
+.speaker h2 { color: #000; }
+.speaker p  { padding-top: 0.5em; padding-bottom: 0.5em; }
+
+@media (max-width: 700px) {
+  main { flex-direction: column; }
+  main > aside, main > section { flex: 1 1 auto; }
+  .featured img {
+    float: none;
+    margin: .5rem 0;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
 
