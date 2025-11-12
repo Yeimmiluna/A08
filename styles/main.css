@@ -35,11 +35,10 @@ h2 { font-size: 130%; color: var(--accent-color); }
 h3 { font-size: 105%; }
 ul { margin-left: 2em; }
 
-/* Indent quote in Our Mission */
 blockquote {
   margin-left: 2em;
   font-style: italic;
-  color: #333;
+  color: #000;
 }
 
 header {
@@ -87,17 +86,24 @@ main > section { flex: 1 0 75%; }
   padding: 1rem 0;
 }
 
-/* Featured image: float right, no border or rounding */
 .featured img {
   float: right;
-  margin: 0 0 1rem 1rem;
-  width: 100%;
-  min-width: 100px;
-  max-width: 250px;
+  margin: 0 1rem 1rem 1rem;
+  width: auto;
+  max-width: 230px;
   height: auto;
+  display: block;
 }
 
-/* Sidebar speaker images */
+.speaker section img {
+  float: right;
+  margin: 0 1rem 1rem 1rem;
+  width: auto;
+  max-width: 230px;
+  height: auto;
+  display: block;
+}
+
 aside img {
   width: 100%;
   min-width: 40px;
@@ -126,7 +132,8 @@ footer p {
 @media (max-width: 700px) {
   main { flex-direction: column; }
   main > aside, main > section { flex: 1 1 auto; }
-  .featured img {
+  .featured img,
+  .speaker section img {
     float: none;
     margin: .5rem 0;
     width: 100%;
